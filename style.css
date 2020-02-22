@@ -37,20 +37,4 @@ button {
   cursor: pointer;
   width: 100%;
 }
-.icon-bar {
-  width: 100%;
-  background-color: #555;
-  overflow: auto;
-  position: static;
-}
-.icon-bar a {
-  float: right;
-  width: 10%;
-  text-align: center;
-  padding: 10px 0;
-  color: white;
-  font-size: 20px;
-}
-.icon-bar a:hover {
-  background-color: #000;
-}
+
