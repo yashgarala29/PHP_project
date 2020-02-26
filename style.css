@@ -10,7 +10,8 @@ input[type=text] input[type= password]{
 }
 
 *:focus {
-  border: 3px solid #555;
+  border: 3px solid cornflowerblue;
+  
 }
 /*==================================*/
 .dropdown {
@@ -49,5 +50,13 @@ button {
   border: none;
   cursor: pointer;
   width: 100%;
+}
+.ali{
+    
+     margin-top:100px ;
+     margin-bottom: auto;
+     margin-right:auto ;
+     margin-left: auto;
+  
 }
 
