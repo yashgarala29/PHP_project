@@ -6,8 +6,8 @@
 
     <center>
         <div class="ali">
-        <form action="firstpage.html" method="POST">
-       
+            <form action="insert.php"  method="post">
+               
             <table border="0">
 
                 <tbody>
@@ -26,6 +26,10 @@
                     <tr>
                         <td>email</td>
                         <td> <input type="email" name="email" value="" required=""></td>
+                    </tr>
+                    <tr>
+                        <td>birth date</td>
+                        <td> <input type="date" name="bdate" value="" required=""></td>
                     </tr>
                     <tr >
                         <td  colspan="2"> <button class="dropbtn">Dropdown</button> </td>
