@@ -16,7 +16,7 @@
             $sql="insert into userdetail (name,PASSWORD,EMAIL,BDATE) values ($name,$password,$mail,$bdate)";
             $sql = "INSERT INTO `userdetail`(`NAME`, `PASSWORD`, `EMAIL`, `BDATE`) VALUES ('$name','$password','$mail','$bdate')";
             $query=$dbhandler->query($sql);
-            header('location:firstpage.html'); 
+            header('location:firstpage.php'); 
        }catch (Exception $e)
        {
            echo $e->getMessage();
