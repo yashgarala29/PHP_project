@@ -8,7 +8,14 @@ input[type=text] input[type= password]{
   transition: 0.5s;
   outline: none;
 }
-
+.blog{
+    box-sizing: border-box;
+    background: #e9e9e9;
+    width: 75%;
+    float: bottom;
+    padding: 20px;
+    margin-top: 20px;
+}
 *:focus {
   border: 3px solid cornflowerblue;
   

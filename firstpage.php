@@ -10,7 +10,6 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="style.css"> 
     </head>
     <body>
-        
             <div class="dropdown" style="float:right;">
              <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content">
@@ -46,11 +45,22 @@ and open the template in the editor.
                                 echo "<form action='logout.php'><button class='dropbtn'>logout</button></form>";
                             }
                             ?>
-                        
-                    
-                 
                 </div>
-              </div>   
+            </div> <br> <br>
             
+         <?php
+                $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
+                $dbhandler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+               $sql = "SELECT * FROM `userdetail` WHERE 1";
+               $result = $dbhandler->query($sql);
+               while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
+//                    echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " password" . $row["password"] . "<br>";
+                echo "<div class='blog'>".$row['NAME']."</div>";
+               
+               }
+            ?>
+<!--        <div class="blog">
+            
+        </div>-->
     </body>
 </html>
