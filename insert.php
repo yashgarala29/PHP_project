@@ -13,7 +13,7 @@
        try{
             $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
             $dbhandler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-            $sql="insert into userdetail (name,PASSWORD,EMAIL,BDATE) values ($name,$password,$mail,$bdate)";
+            //$sql="insert into userdetail (name,PASSWORD,EMAIL,BDATE) values ($name,$password,$mail,$bdate)";
             $sql = "INSERT INTO `userdetail`(`NAME`, `PASSWORD`, `EMAIL`, `BDATE`) VALUES ('$name','$password','$mail','$bdate')";
             $query=$dbhandler->query($sql);
             header('location:firstpage.php'); 

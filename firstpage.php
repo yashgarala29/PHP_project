@@ -32,7 +32,7 @@ and open the template in the editor.
 
                               </tr>
                               <tr>
-                                  <td><button class='dropbtn'>Dropdown</button></td>
+                                  <td><button>Dropdown</button></td>
                                   <td><a href='new_user.php'>new user</td>
                               </tr>
                           </tbody>
@@ -41,7 +41,7 @@ and open the template in the editor.
                       </form>";
                             }
                             else{
-                                echo "welcome  ".$_SESSION['username'];
+                                echo "welcome  ".$_SESSION['username']."id".$_SESSION['id'];
                                 echo "<form action='logout.php'><button class='dropbtn'>logout</button></form>";
                             }
                             ?>
