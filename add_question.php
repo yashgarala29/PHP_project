@@ -25,7 +25,8 @@
      if(file_put_contents($file_name, $jsondata)) {
 	        echo 'Data successfully saved';
         }
-    $date = date("d-m-Y");
+//   date_default_timezone_set("India/New_Delhi");
+    $date = date("d-m-Y h:i:sa");
     $id=$_SESSION['id'];
    // $sql = "INSERT INTO `userdetail`(`NAME`, `PASSWORD`, `EMAIL`, `BDATE`) VALUES ('$name','$password','$mail','$bdate')";
     $sql = "INSERT INTO `question` (`q_id`, `id`, `date`, `file`) VALUES ('$q_id','$id', '$date', '$file_name')";
