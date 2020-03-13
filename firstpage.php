@@ -8,7 +8,8 @@ and open the template in the editor.
     <head>
         <title>PHP project</title>
         <link rel="stylesheet" type="text/css" href="style.css"> 
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="temp1.css"> 
+        <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
     </head>
     <body>
             <div class="dropdown" style="float:right;">
@@ -65,7 +66,7 @@ and open the template in the editor.
                     //echo "<div class='blog'>".$row['file']."</div>";
                    
                    echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br>";
-                    echo "<a href=''>read more</a></div>";
+                    echo "<a href='http://localhost/PHP_project/seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
                    echo "</div>";
                
                }
