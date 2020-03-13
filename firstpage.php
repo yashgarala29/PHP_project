@@ -12,6 +12,10 @@ and open the template in the editor.
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
     </head>
     <body>
+        <form action="question.php" method="POST">
+            <div align='right'> <button style="height:50px;width:200px">question</button></div>
+        </form>
+         
             <div class="dropdown" style="float:right;">
              <button class="dropbtn">Dropdown</button>
                 <div class="dropdown-content">

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    //$_SESSION['q_id']=$_GET['q_id'];
+    if(!isset($_SESSION['username']))
+    {
+           header('location:firstpage.php'); 
+    }
+    
+?>
 <html>
     <head>
         <title>question</title>
