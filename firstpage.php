@@ -8,6 +8,7 @@ and open the template in the editor.
     <head>
         <title>PHP project</title>
         <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     </head>
     <body>
             <div class="dropdown" style="float:right;">
@@ -51,16 +52,25 @@ and open the template in the editor.
          <?php
                 $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
                 $dbhandler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-               $sql = "SELECT * FROM `userdetail` WHERE 1";
+               $sql = "SELECT * FROM `question` WHERE 1";
                $result = $dbhandler->query($sql);
                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 //                    echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " password" . $row["password"] . "<br>";
-                echo "<div class='blog'>".$row['NAME']."</div>";
+                   $data = file_get_contents($row['file']);
+                   $phpMobiles = json_decode($data);
+                   $q_id=$phpMobiles[1]->id;
+                   echo "<div class='panel panel-default' style='width: 75%'>";
+                   echo " <div class='panel-heading'><a href='' class='profile'>".$phpMobiles[1]->name."</a></div>";
+                   echo "<div class='panel-body'>".$phpMobiles[1]->text."</div>";
+                    //echo "<div class='blog'>".$row['file']."</div>";
+                   
+                   echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br>";
+                    echo "<a href=''>read more</a></div>";
+                   echo "</div>";
                
                }
             ?>
-<!--        <div class="blog">
-            
-        </div>-->
     </body>
 </html>
+
+
