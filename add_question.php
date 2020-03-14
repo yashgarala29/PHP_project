@@ -23,7 +23,7 @@
     array_push($arr_data,$formdata);
     $jsondata = json_encode($arr_data, JSON_PRETTY_PRINT);
      if(file_put_contents($file_name, $jsondata)) {
-	        echo 'Data successfully saved';
+	        header('location:firstpage.php');
         }
 //   date_default_timezone_set("India/New_Delhi");
     $date = date("d-m-Y h:i:sa");

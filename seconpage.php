@@ -24,6 +24,11 @@
              echo " <div class='panel-heading'><a href='' class='profile'>".$arr_data[$i]->name."</a></div>";
              echo "<div class='panel-body'>".$arr_data[$i]->text."</div>";
              echo "</div>";
+             if($i==1)
+             {
+                 $t=sizeof($arr_data)-2;
+                 echo "<h1>$t Answer</h1>";
+             }
         }
      ?>
 </html>

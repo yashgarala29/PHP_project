@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>PHP project</title>
+        <title>php project</title>
         <link rel="stylesheet" type="text/css" href="style.css"> 
         <link rel="stylesheet" type="text/css" href="temp1.css"> 
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
@@ -64,8 +64,9 @@ and open the template in the editor.
                    $data = file_get_contents($row['file']);
                    $phpMobiles = json_decode($data);
                    $q_id=$phpMobiles[1]->id;
+                   $id = $row['id'];
                    echo "<div class='panel panel-default' style='width: 75%'>";
-                   echo " <div class='panel-heading'><a href='' class='profile'>".$phpMobiles[1]->name."</a></div>";
+                   echo " <div class='panel-heading'><a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
                    echo "<div class='panel-body'>".$phpMobiles[1]->text."</div>";
                     //echo "<div class='blog'>".$row['file']."</div>";
                    
