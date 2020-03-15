@@ -36,7 +36,7 @@
                         <td> <input type="date" name="bdate" value="" required=""></td>
                     </tr>
                     <tr >
-                        <td  colspan="2"> <button class="dropbtn">Dropdown</button> </td>
+                        <td  colspan="2"> <button class="dropbtn">Submit</button> </td>
                        
                     </tr>
                 </tbody>
