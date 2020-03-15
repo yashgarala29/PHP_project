@@ -7,7 +7,7 @@
 //        print_r($_SESSION);
         $password =$_GET['password'];
         $username=$_GET['username'];
-        $sql = "SELECT  * FROM `userdetail` WHERE NAME='$username' and PASSWORD='$password'";
+        $sql = "SELECT  * FROM `userdetail` WHERE username='$username' and PASSWORD='$password'";
         $query=$dbhandler->query($sql);
         $count=$query->rowCount();
         if($count>0)

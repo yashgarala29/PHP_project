@@ -21,7 +21,7 @@ and open the template in the editor.
          <?php
                 $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
                 $dbhandler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-               $sql = "SELECT * FROM `question` WHERE 1";
+               $sql = "SELECT * FROM `question` WHERE 1 ORDER BY q_id DESC";
                $result = $dbhandler->query($sql);
                while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
 //                    echo "<br> id: ". $row["id"]. " - Name: ". $row["name"]. " password" . $row["password"] . "<br>";

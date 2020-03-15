@@ -1,6 +1,8 @@
+
 <html>
     <head>
         <title>user detail</title>
+        <?php include 'header.php';?>
         <link rel="stylesheet" type="text/css" href="style.css"> 
         <link rel="stylesheet" type="text/css" href="temp1.css"> 
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
