@@ -4,55 +4,19 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
+<?php include 'header.php';?>
 <html>
     <head>
         <title>php project</title>
-        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="stylesheet" type="text/css" href="css/header.css"> 
         <link rel="stylesheet" type="text/css" href="temp1.css"> 
+        <link rel="stylesheet" type="text/css" href="style.css"> 
         <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
     </head>
     <body>
-        <form action="question.php" method="POST">
-            <div align='right'> <button style="height:50px;width:200px">question</button></div>
-        </form>
+        
          
-            <div class="dropdown" style="float:right;">
-             <button class="dropbtn">Dropdown</button>
-                <div class="dropdown-content">
-                    
-                    <?php session_start();
-                    if(!isset($_SESSION['username']))
-                          {
-                            
-                            //$_
-                            echo "<form action='check.php'>
-                        <table border='0'>
-                          
-                            <tbody>
-                              <tr>
-                                  <td colspan='2'>user name <input type='text' name='username' value='' /></td>
-
-                              </tr>
-                              <tr>
-                                  <td colspan='2'>password<input type='password' name='password' value='' /></td>
-
-                              </tr>
-                              <tr>
-                                  <td><button>Dropdown</button></td>
-                                  <td><a href='new_user.php'>new user</td>
-                              </tr>
-                          </tbody>
-                      </table>
-
-                      </form>";
-                            }
-                            else{
-                                echo "welcome  ".$_SESSION['username']."id".$_SESSION['id'];
-                                echo "<form action='logout.php'><button class='dropbtn'>logout</button></form>";
-                            }
-                            ?>
-                </div>
-            </div> <br> <br>
+             <br> <br>
             
          <?php
                 $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
@@ -65,15 +29,19 @@ and open the template in the editor.
                    $phpMobiles = json_decode($data);
                    $q_id=$phpMobiles[1]->id;
                    $id = $row['id'];
+                   $text=$phpMobiles[1]->text;
+//                   $text=$text.replace("\n","<br>");
+                   $text=str_replace('\n', '<br>', $text);
                    echo "<div class='panel panel-default' style='width: 75%'>";
                    echo " <div class='panel-heading'><a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
-                   echo "<div class='panel-body'>".$phpMobiles[1]->text."</div>";
-                    //echo "<div class='blog'>".$row['file']."</div>";
+                   echo nl2br("<div class='panel-body'>".$text."</div>");
+                   if(isset($_SESSION['username'])){
+                       echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";
+                   }
                    
-                   echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br>";
-                    echo "<a href='http://localhost/PHP_project/seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
+                    echo "<div align='right'><a href='http://localhost/PHP_project/seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
                    echo "</div>";
-               
+                   
                }
             ?>
     </body>

@@ -12,6 +12,10 @@
 
                 <tbody>
                     <tr>
+                        <td>username</td>
+                        <td> <input type="text" name="username" value="" required="" />   </td>
+                    </tr>
+                    <tr>
                         <td>name</td>
                         <td> <input type="text" name="name" value="" required="" />   </td>
                     </tr>
