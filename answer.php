@@ -1,6 +1,6 @@
 <?php include 'header.php';?>
 <?php
-    session_start();
+    //session_start();
     $_SESSION['q_id']=$_GET['q_id'];
     if(!isset($_GET['q_id'])||!isset($_SESSION['username']))
     {

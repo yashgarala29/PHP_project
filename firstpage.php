@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
+
 <?php include 'header.php';?>
 <html>
     <head>
@@ -15,9 +10,9 @@ and open the template in the editor.
     </head>
     <body>
         
-         
+         <div style="margin-left: 10px;"> 
              <br> <br>
-            
+             
          <?php
                 $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
                 $dbhandler->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
@@ -44,6 +39,7 @@ and open the template in the editor.
                    
                }
             ?>
+                 </div>
     </body>
 </html>
 
