@@ -22,9 +22,10 @@
         for($i=1;$i<sizeof($arr_data);$i++)
         {
             $text=$arr_data[$i]->text;
+             $id = $row['id'];
              $text=str_replace('\n', '<br>', $text);
              echo "<div class='panel panel-default' style='width: 85%'>";
-             echo " <div class='panel-heading'><a href='' class='profile'>".$arr_data[$i]->name."</a></div>";
+             echo " <div class='panel-heading'><a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$arr_data[$i]->name."</a></div>";
              echo nl2br("<div class='panel-body'>".$text."</div>");
              echo "</div>";
              if($i==1)

@@ -1,10 +1,11 @@
+
 <?php include 'header.php';?>
 <html>
 <head>
         <title>PHP project</title>
-         <link rel="stylesheet" type="text/css" href="style.css"> 
+         <link rel="stylesheet" type="text/css" href="style.css"/> 
  </head>
-
+ <body>
     <center>
         <div class="ali">
             <form action="insert.php"  method="post">
@@ -46,6 +47,6 @@
          </form>
       </div>
         </center>
-    
+    </body>
     
 </html>

@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-
-    <link rel="stylesheet" type="text/css" href="css/header.css"> 
-        <!--/*<link rel="stylesheet" type="text/css" href="temp1.css">*/--> 
-
+   <link rel="stylesheet" type="text/css" href="css/header.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
@@ -22,6 +19,11 @@
                           echo "<div><a href='http://localhost/PHP_project/userdetail.php?id=$id'>".$_SESSION["username"]."</a></div>";
                     }
       ?>
+    
+    <form class="example" action="/action_page.php" style="margin: initial;max-width:300px;float: left ">
+        <input type="text" placeholder="Search.." class="fa" name="search">
+        <button type="submit"style=" font-size: 15px;" class="fa fa-search"></button>
+    </form>
   <div class="dropdown1">
       <?php 
       if(!isset($_SESSION['username'])){
