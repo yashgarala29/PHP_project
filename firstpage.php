@@ -10,7 +10,7 @@
     </head>
     <body>
         
-         <div style="margin-left: 10px;"> 
+         <div style="margin-left: 10px;" class= "data"> 
              <br> <br>
              
          <?php
@@ -27,7 +27,7 @@
                    $text=$phpMobiles[1]->text;
 //                   $text=$text.replace("\n","<br>");
                    $text=str_replace('\n', '<br>', $text);
-                   echo "<div class='panel panel-default' style='width: 75%'>";
+                   echo "<div class='panel panel-default' style='width: 75%' id='myData'>";
                    echo " <div class='panel-heading'><a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
                    echo nl2br("<div class='panel-body'>".$text."</div>");
                    if(isset($_SESSION['username'])){
@@ -39,7 +39,29 @@
                    
                }
             ?>
-                 </div>
+                  </div>
+        <script>
+        function myFunction() {
+          var input, filter,div, div1;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+           div1 = document.getElementsByClassName("panel panel-default");
+          div = document.getElementsByClassName("panel-body");
+//          alert(div.length);
+          for (i = 0; i < div.length; i++) {
+              if (div[i]) {
+              txtValue = div[i].textContent || [i].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div1[i].style.display = "";
+              } else {
+                div1[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
+        
+        
     </body>
 </html>
 

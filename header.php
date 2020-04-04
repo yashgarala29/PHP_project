@@ -20,8 +20,8 @@
                     }
       ?>
     
-    <form class="example" action="/action_page.php" style="margin: initial;max-width:300px;float: left ">
-        <input type="text" placeholder="Search.." class="fa" name="search">
+    <form class="example" style="margin: initial;max-width:300px;float: left ">
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search.." class="fa">
         <button type="submit"style=" font-size: 15px;" class="fa fa-search"></button>
     </form>
   <div class="dropdown1">
@@ -53,14 +53,12 @@
                             }
                             else{
                                 echo "<form action='logout.php'><button class='dropbtn1' style='background-color: #4CAF50;'>logout</button></form>";
-//                                echo '<form action="logout.php"><button class="dropbtn1">Logout</button>';
-//                                echo "welcome  ".$_SESSION['username']."<br><br>";
-//                                echo "<form action='logout.php'><button class='dropbtn1' style='background-color: #4CAF50; width: 100%;'>logout</button></form>";
                             }
                      ?>
     </div>
   
 </div>
 </div>
+
 </body>
 </html>

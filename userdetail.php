@@ -45,6 +45,26 @@
         
          
         ?>
+        <script>
+        function myFunction() {
+          var input, filter,div, div1;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+           div1 = document.getElementsByClassName("panel panel-default");
+          div = document.getElementsByClassName("panel-body");
+//          alert(div.length);
+          for (i = 0; i < div.length; i++) {
+              if (div[i]) {
+              txtValue = div[i].textContent || [i].innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                div1[i].style.display = "";
+              } else {
+                div1[i].style.display = "none";
+              }
+            }       
+          }
+        }
+        </script>
 </body>
 </html>
 

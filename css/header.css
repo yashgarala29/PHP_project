@@ -65,7 +65,7 @@ form.example button {
   float: left;
   width: 20%;
  padding: 11.5px;
-  /*margin-top:-02%;*/
+  margin-top:8px;
   color: white;
   cursor: pointer;
 }
