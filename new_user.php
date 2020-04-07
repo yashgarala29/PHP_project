@@ -3,17 +3,20 @@
 <html>
 <head>
         <title>PHP project</title>
-         <link rel="stylesheet" type="text/css" href="style.css"/> 
+          <link rel="stylesheet" type="text/css" href="css/header.css"> 
+        <link rel="stylesheet" type="text/css" href="temp1.css"> 
+        <link rel="stylesheet" type="text/css" href="style.css"> 
  </head>
  <body>
     <center>
         <div class="ali">
-            <form action="insert.php"  method="post">
+            <form action="insert.php"  method="post" enctype="multipart/form-data">
                
             <table border="0">
 
                 <tbody>
-                    <tr>
+                    
+                    <tr >
                         <td>username</td>
                         <td> <input type="text" name="username" value="" required="" />   </td>
                     </tr>
@@ -37,10 +40,15 @@
                         <td>birth date</td>
                         <td> <input type="date" name="bdate" value="" required=""></td>
                     </tr>
+                    <tr>
+                        <td>photo</td>
+                        <td> <input type="file" name="photo" id="photo">   </td>
+                    </tr>
                     <tr >
                         <td  colspan="2"> <button class="dropbtn">Submit</button> </td>
                        
                     </tr>
+                    
                 </tbody>
             </table>
 

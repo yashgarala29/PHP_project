@@ -1,10 +1,29 @@
 <?php
+    
     $u_name=$_POST["username"];
     $name=$_POST["name"];
     $password=$_POST["pass"];
     $rpassword=$_POST["rpass"];
     $bdate=$_POST["bdate"];
     $mail=$_POST["email"];
+    $path;
+    try {
+        if(!empty($_FILES["photo"]["name"]))
+        {
+            $path="photo/userphoto/".basename($_FILES["photo"]["name"]);
+            move_uploaded_file($_FILES["photo"]["tmp_name"],$path);
+            $ext = pathinfo($path, PATHINFO_EXTENSION);
+            $new="photo/userphoto/".$u_name.".".$ext;
+            rename($path,$new);
+
+        }else
+        {
+            copy("photo/log.png", "photo/userphoto/".$u_name.".png");
+        }
+    }
+     catch (Exception $ex) {
+        echo $ex;
+        }
     if(strcmp($password, $rpassword) != 0)
     {
         echo "please enter valid password";
