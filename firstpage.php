@@ -30,7 +30,7 @@
                    $text=str_replace('\n', '<br>', $text);
                    $img='photo/userphoto/'.$phpMobiles[1]->name.'.png';
                    echo "<div class='panel panel-default' style='width: 75%' id='myData'>";
-                   echo " <div class='panel-heading'><img  src =$img class='pho'></in> <a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
+                   echo " <div class='panel-heading'><img  src =$img class='pho'> <a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
                    echo nl2br("<div class='panel-body'>".$text."</div>");
                    if(isset($_SESSION['username'])){
                        echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";

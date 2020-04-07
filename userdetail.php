@@ -31,7 +31,7 @@
             $q_id=$row1['q_id'];
             $id=$row1['id'];
             echo "<div class='panel panel-default' style='width: 85%'>";
-             echo " <div class='panel-heading'><a href='' class='profile'>".$arr_data[1]->name."</a></div>";
+             echo " <div class='panel-heading'><img  src =$img class='pho'><a href='' class='profile'>".$arr_data[1]->name."</a></div>";
              echo nl2br("<div class='panel-body'>".$arr_data[1]->text."</div>");
              
              if(isset($_SESSION['username'])){
