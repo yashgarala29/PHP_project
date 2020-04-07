@@ -19,6 +19,13 @@
             //print_r($_SESSION);
             header('location:firstpage.php'); 
         }
+        else {
+            //header('location:firstpage.php');
+            $msg="<div style='color:red'>please enter valid username or password.</div>";
+            header("location:firstpage.php?msg=$msg");
+//             header("location:firstpage.php?msg=Your profile is Successfully Update.");
+      
+        }
     }
     } catch (Exception $exc) {
         echo $exc->getTraceAsString();

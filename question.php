@@ -11,8 +11,10 @@
 <html>
     <head>
         <title>question</title>
+        <link rel="stylesheet" type="text/css" href="css/header.css"> 
+        <link rel="stylesheet" type="text/css" href="temp1.css"> 
         <link rel="stylesheet" type="text/css" href="style.css"> 
-    </head>
+    </head><br><br>
     <form action="add_question.php" method="POST">
              <table border="0">
                 <tbody>

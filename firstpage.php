@@ -12,7 +12,7 @@
     <body>
         
          <div style="margin-left: 10px;" class= "data"> 
-             <br> <br>
+             <br><br>
              
          <?php
                 $dbhandler=new PDO('mysql:host=localhost;dbname=php','root','');
@@ -28,7 +28,7 @@
                    $text=$phpMobiles[1]->text;
 //                   $text=$text.replace("\n","<br>");
                    $text=str_replace('\n', '<br>', $text);
-                   $img='photo/userphoto/'.$id.'.png';
+                   $img='photo/userphoto/'.$phpMobiles[1]->name.'.png';
                    echo "<div class='panel panel-default' style='width: 75%' id='myData'>";
                    echo " <div class='panel-heading'><img  src =$img class='pho'></in> <a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
                    echo nl2br("<div class='panel-body'>".$text."</div>");

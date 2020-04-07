@@ -15,13 +15,14 @@
         $sql = "SELECT * FROM `userdetail` WHERE id=$id";
         $result = $dbhandler->query($sql);
         $row = $result->fetch(PDO::FETCH_ASSOC);
-        echo "<h1><div style='font-size: 50;' class=profile>Name : ".$row['NAME']."</div></h1>";
+        $img='photo/userphoto/'.$row['username'].'.png';
+        echo "<section><nav><img  src =$img style='width: 200px;height:200px;'></nav><article><h1><div style='font-size: 50;' class=profile>Name : ".$row['NAME']."</div></h1>";
         echo "<h2><div style='font-size: 25'class=profile>Email:".$row['EMAIL']."</div></h2>";
-        echo "<h2><div style='font-size: 25'class=profile>Birth Date:".$row['BDATE']."</div></h2>";
-//      echo "<h4>birth date:<div class='profile'> ".$row['BDATE']."</div></h4>";
+        echo "<h2><div style='font-size: 25'class=profile>Birth Date:".$row['BDATE']."</div></h2></article></section>";
+ 
         $sql = "SELECT * FROM `question` WHERE id=$id";
         $result1 = $dbhandler->query($sql);
-        echo "<br><h2>Question</h2>";
+        echo "<br><br><h2>Question</h2>";
         while($row1 = $result1->fetch(PDO::FETCH_ASSOC))
         {
             $arr_data = array();
@@ -41,8 +42,6 @@
                    echo "</div>";
                    
         }
-        echo "<br><h2>Answer</h2>"; 
-        
          
         ?>
         <script>

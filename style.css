@@ -69,3 +69,23 @@ button {
      margin-left: auto;
   
 }
+
+nav {
+  float: left;
+  width: 30%;
+  padding: 20px;
+  height: 200px;
+  margin-bottom: 30px;
+}
+
+/* Style the list inside the menu */
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: 200px; 
+  margin-bottom: 30px;
+}
+
+/* Clear floats after the columns */

@@ -11,9 +11,11 @@
 <html>
     <head>
         <title>answer</title>
-         <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link rel="stylesheet" type="text/css" href="css/header.css"> 
+        <link rel="stylesheet" type="text/css" href="temp1.css"> 
+        <link rel="stylesheet" type="text/css" href="style.css"> 
     </head>
-    <form action="add_answer.php" method="POST">
+    <form action="add_answer.php" method="POST"><br><br>
         <table border="0">
             <tbody>
                 <tr>

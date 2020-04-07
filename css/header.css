@@ -1,6 +1,7 @@
 
 .navbar1 {
-  overflow: hidden;
+  overflow: auto;
+  width: 100%;
   background-color: #23527c;
 }
 *:focus {
