@@ -28,15 +28,16 @@
                    $text=$phpMobiles[1]->text;
 //                   $text=$text.replace("\n","<br>");
                    $text=str_replace('\n', '<br>', $text);
+                   $date =$row['date'];
                    $img='photo/userphoto/'.$phpMobiles[1]->name.'.png';
                    echo "<div class='panel panel-default' style='width: 75%' id='myData'>";
-                   echo " <div class='panel-heading'><img  src =$img class='pho'> <a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a></div>";
+                   echo " <div class='panel-heading'><img  src =$img class='pho'> <a href='userdetail.php?id=$id' class='profile'>".$phpMobiles[1]->name."</a><div style=' float: right; color:#808080;'>$date</div></div>";
                    echo nl2br("<div class='panel-body'>".$text."</div>");
                    if(isset($_SESSION['username'])){
-                       echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";
+                       echo " <div align='right'><a href='answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";
                    }
                    
-                    echo "<div align='right'><a href='http://localhost/PHP_project/seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
+                    echo "<div align='right'><a href='seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
                    echo "</div>";
                    
                }

@@ -29,7 +29,7 @@
              $text=str_replace('\n', '<br>', $text);
              $img='photo/userphoto/'.$arr_data[$i]->name.'.png';
              echo "<div class='panel panel-default' style='width: 85%'>";
-             echo " <div class='panel-heading'><img  src =$img class='pho'><a href='http://localhost/PHP_project/userdetail.php?id=$id' class='profile'>".$arr_data[$i]->name."</a></div>";
+             echo " <div class='panel-heading'><img  src =$img class='pho'><a href='userdetail.php?id=$id' class='profile'>".$arr_data[$i]->name."</a></div>";
              echo nl2br("<div class='panel-body'>".$text."</div>");
              echo "</div>";
              if($i==1)

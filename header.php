@@ -16,7 +16,7 @@
                     {
                         $id=$_SESSION['id'];
                           echo "<a href='question.php'>ask question</a>";
-                          echo "<div><a href='http://localhost/PHP_project/userdetail.php?id=$id'>".$_SESSION["username"]."</a></div>";
+                          echo "<div><a href='userdetail.php?id=$id'>".$_SESSION["username"]."</a></div>";
                           echo "<a href='view_my_profile.php'>edit your profile</a>";
                     }
       ?>

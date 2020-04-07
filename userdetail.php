@@ -35,10 +35,10 @@
              echo nl2br("<div class='panel-body'>".$arr_data[1]->text."</div>");
              
              if(isset($_SESSION['username'])){
-                       echo " <div align='right'><a href='http://localhost/PHP_project/answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";
+                       echo " <div align='right'><a href='answer.php?q_id=$q_id' class='profile'>write answer</a><br></div>";
                    }
                    
-                    echo "<div align='right'><a href='http://localhost/PHP_project/seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
+                    echo "<div align='right'><a href='seconpage.php?q_id=$q_id' target='_blank'>read more</a></div>";
                    echo "</div>";
                    
         }
